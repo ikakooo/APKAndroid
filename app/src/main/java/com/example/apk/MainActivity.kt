@@ -10,9 +10,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        public val button
-        button.setOnClickListener {
-          val b: bolean  =  randnums()
+        button.setOnClickListener(View.OnClickListener {
+            button.text = "გაიღიმე"
+        })
+        button.setBackgroundColor(Color.GREEN)
+        button.setTextColor(Color.RED)
+        constraintLayout.addView(button);
+
+          val b:Bolean  =  randnums()
            if (b){
                Toast.makeText(this, "სასაცილოა", Toast.LENGTH_SHORT).show()
 
