@@ -15,9 +15,9 @@ class MainActivity : AppCompatActivity() {
         })
         button.setBackgroundColor(Color.GREEN)
         button.setTextColor(Color.RED)
-        constraintLayout.addView(button);
+        constraintLayout.addView(button);}
 
-          val b:Bolean  =  randnums()
+          val b:Bolean  =  randomGenerator(){
            if (b){
                Toast.makeText(this, "სასაცილოა", Toast.LENGTH_SHORT).show()
 
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
            }
 
          }
-     fun rundnums():Bolean {
+     fun randomGenerator():Bolean {
          val randomNumber: int =(1..101).random()
          return randomNumber%2==0
      }
