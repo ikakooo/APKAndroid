@@ -3,32 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EA2D6D"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
     tools:context=".MainActivity">
 
 
     <Button
         android:id="@+id/minusButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#FAE000"
+        android:padding="60dp"
         android:text="@string/minus"
-
-        android:textSize="80sp"
-         />
+        android:textSize="80sp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:text="@string/num"
-        android:textSize="100sp"
-        android:layout_margin="10dp" />
+        android:textSize="100sp" />
 
     <Button
         android:id="@+id/plusButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#49FF00"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
         android:text="@string/plus"
-        android:textSize="80sp"
-         />
+        android:textSize="80sp" />
 
 </LinearLayout>
