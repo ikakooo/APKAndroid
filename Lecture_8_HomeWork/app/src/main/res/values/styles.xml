@@ -14,5 +14,9 @@
         <item name="colorControlHighlight">#DF051F</item>
     </style>
 
+    <style name="italicStyle">
+        <item name="android:textStyle">italic</item>
+    </style>
+
 
 </resources>
