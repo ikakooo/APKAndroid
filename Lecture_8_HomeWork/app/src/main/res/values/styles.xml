@@ -11,7 +11,7 @@
     <style name="MyTextTheme">
         <item name="colorControlNormal">#F4F409</item>
         <item name="colorControlActivated">#24F10D</item>
-        <item name="colorControlHighlight">#59F306</item>
+        <item name="colorControlHighlight">#DF051F</item>
     </style>
 
 
