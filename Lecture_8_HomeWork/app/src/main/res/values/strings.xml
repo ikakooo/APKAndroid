@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lecture8</string>
+    <string name="username">Username or Email</string>
+    <string name="password">PassWord</string>
+    <string name="log_in">Log in</string>
+    <string name="or_ForSeparate">or</string>
+    <string name="registerButton">Register</string>
+</resources>
