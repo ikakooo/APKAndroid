@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_launcher"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/firsNameText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:background="#06D6F1"
+            android:hint="@string/FirsName"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10sp"
+            android:singleLine="true"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+
+            android:layout_marginBottom="15dp"
+            android:background="#06D6F1"
+            android:hint="@string/LastName"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10sp"
+            android:singleLine="true"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/ageInt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:background="#06D6F1"
+            android:hint="@string/Age"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10sp"
+            android:singleLine="true"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/emailText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="70dp"
+            android:background="#06D6F1"
+            android:hint="@string/Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10sp"
+            android:singleLine="true"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/forgotPasswordButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="15dp"
+            android:background="#DF6005"
+            android:text="@string/Add_user"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/removeUserButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="#DF6005"
+            android:text="@string/Remove_user"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

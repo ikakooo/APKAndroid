@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">quiz1</string>
+    <string name="FirsName">FirsName</string>
+    <string name="LastName">LastName</string>
+    <string name="Age">Age</string>
+    <string name="Email">Email</string>
+    <string name="Add_user">Add User</string>
+    <string name="Remove_user">Remove User</string>
+</resources>
