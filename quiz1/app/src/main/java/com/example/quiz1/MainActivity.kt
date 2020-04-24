@@ -13,6 +13,10 @@ class MainActivity : AppCompatActivity() {
         init()
     }
     private fun init(){
+        interface firstname<K, out V>
+        interface lastname<K, out V>
+        interface age<K, out V>
+        interface email<K, out V>
        var string: name firsNameText.onFocusChangeListener
 
 
