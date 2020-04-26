@@ -24,7 +24,7 @@
             android:autofillHints="@string/FirsName"
             android:background="#06D6F1"
             android:hint="@string/FirsName"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:paddingStart="15sp"
             android:singleLine="true"
             tools:ignore="RtlSymmetry" />
@@ -39,7 +39,7 @@
             android:autofillHints="@string/LastName"
             android:background="#06D6F1"
             android:hint="@string/LastName"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:paddingStart="15sp"
             android:singleLine="true"
             tools:ignore="RtlSymmetry" />
@@ -54,7 +54,7 @@
             android:autofillHints="@string/Age"
             android:background="#06D6F1"
             android:hint="@string/Age"
-            android:inputType="textEmailAddress"
+            android:inputType="number"
             android:paddingStart="10sp"
             android:singleLine="true"
             tools:ignore="RtlSymmetry" />
