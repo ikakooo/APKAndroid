@@ -6,11 +6,13 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    
 
     private var userCount = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+                setContentView(R.layout.activity_main)
         addUser()
         // removeUser()
     }
@@ -20,15 +22,16 @@ class MainActivity : AppCompatActivity() {
         eddUserButton.setOnClickListener {
 
             val userNameSaver = usernameText.text.toString()
-            val ageIntSave = ageInt.text.toString()
-            val emailTextSave = emailText.text.toString()
+            val ageIntSaver = ageInt.text.toString()
+            val emailTextSaver = emailText.text.toString()
             val firstNameSaver = firsNameText.text.toString()
 
             textViewShow.text =
-                "$userCount ) First Name: $firstNameSaver Last Name: $userNameSaver Age: $ageIntSave Email: $emailTextSave"
+                "$userCount ) First Name: $firstNameSaver Last Name: $userNameSaver Age: $ageIntSaver Email: $emailTextSaver"
             // textViewShow.text = "ikakooo  $firstNameSaver"
             userCount++
         }
+
 
     }
 

@@ -2,5 +2,11 @@
     <string name="app_name">Lecture_10_Work</string>
     <string name="go_to_the_second_page">Go to the second page</string>
     <string name="hello_ikakooo">hello ikakooo-></string>
-    <string name="go_to_the_first_page">go to the first page</string>
+    <string name="go_to_the_first_page">Go to the first page</string>
+    <string name="your_nik">Your Nik</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="your_age">Your Age</string>
+    <string name="choose_address">Choose Address</string>
+    <string name="sign_up">Sign Up</string>
 </resources>

@@ -5,15 +5,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/free"
-    tools:context=".FirstActivity">
+    tools:context=".RegisterActivity">
 
     <EditText
-        android:id="@+id/textView"
+        android:id="@+id/userNameTextView"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:background="@color/colorPrimary"
+        android:autofillHints="@string/your_nik"
+        android:background="@color/edit_text_coloure"
+        android:hint="@string/your_nik"
+        android:inputType="text"
         android:paddingStart="15dp"
-        android:text="@string/hello_ikakooo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.057"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/firstNameTextView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="@string/first_name"
+        android:background="@color/edit_text_coloure"
+        android:hint="@string/first_name"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTextView"
+        app:layout_constraintVertical_bias="0.021"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/lastNameTextView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="@string/last_name"
+        android:background="@color/edit_text_coloure"
+        android:hint="@string/last_name"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameTextView"
+        app:layout_constraintVertical_bias="0.022"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/ageTextView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="@string/your_age"
+        android:background="@color/edit_text_coloure"
+        android:hint="@string/your_age"
+        android:inputType="number"
+        android:paddingStart="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -21,21 +81,33 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toTopOf="parent"
-
-        app:layout_constraintVertical_bias="0.057"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameTextView"
+        app:layout_constraintVertical_bias="0.023"
         tools:ignore="RtlSymmetry" />
 
     <Button
         android:id="@+id/firsPageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/go_to_the_second_page"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="404dp"
+        android:text="@string/choose_address"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
 
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firsPageButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
