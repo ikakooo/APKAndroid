@@ -9,4 +9,6 @@
     <string name="your_age">Your Age</string>
     <string name="choose_address">Choose Address</string>
     <string name="sign_up">Sign Up</string>
+    <string name="not_selected">Not selected</string>
+    <string name="your_address_write_here">your address write here</string>
 </resources>

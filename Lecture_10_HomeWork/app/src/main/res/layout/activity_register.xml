@@ -8,7 +8,7 @@
     tools:context=".RegisterActivity">
 
     <EditText
-        android:id="@+id/userNameTextView"
+        android:id="@+id/userNikTextView"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:autofillHints="@string/your_nik"
@@ -42,7 +42,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/userNikTextView"
         app:layout_constraintVertical_bias="0.021"
         tools:ignore="RtlSymmetry" />
 
@@ -86,7 +86,7 @@
         tools:ignore="RtlSymmetry" />
 
     <Button
-        android:id="@+id/firsPageButton"
+        android:id="@+id/chooseAddressButton"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginBottom="404dp"
@@ -101,13 +101,25 @@
         tools:ignore="UnknownIdInLayout" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signUpButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firsPageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/chooseAddressButton" />
+
+    <TextView
+        android:id="@+id/addressShowTextView"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="@string/not_selected"
+        android:background="@color/edit_text_coloure"
+        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseAddressButton"
+        app:layout_constraintVertical_bias="0.05" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
