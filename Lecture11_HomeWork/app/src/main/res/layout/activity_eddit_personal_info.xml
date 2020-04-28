@@ -3,7 +3,130 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/main_background"
     android:layout_height="match_parent"
     tools:context=".EdditPersonalInfoActivity">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="69dp"
+        android:background="@mipmap/defaut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VectorDrawableCompat" />
+
+    <EditText
+        android:id="@+id/userNikTextView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="@string/your_nik"
+        android:background="@color/edit_text_coloure"
+        android:text="@string/irakli"
+        android:inputType="text"
+
+        android:paddingStart="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.048"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/firstNameTextView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="@string/first_name"
+        android:background="@color/edit_text_coloure"
+        android:hint="@string/first_name"
+        android:paddingStart="15dp"
+        android:text="@string/chkhitunidze"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNikTextView"
+        app:layout_constraintVertical_bias="0.018"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/lastNameTextView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="@string/last_name"
+        android:background="@color/edit_text_coloure"
+        android:hint="@string/last_name"
+        android:text="@string/i_chkhitunidze_cu_edu_ge"
+        android:paddingStart="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameTextView"
+        app:layout_constraintVertical_bias="0.024"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/ageTextView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="@string/your_age"
+        android:background="@color/edit_text_coloure"
+        android:text="@string/_1999"
+        android:inputType="number"
+        android:paddingStart="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/lastNameTextView"
+        app:layout_constraintVertical_bias="0.022"
+        tools:ignore="RtlSymmetry" />
+
+
+
+    <EditText
+        android:id="@+id/genderTextView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="@string/last_name"
+        android:background="@color/edit_text_coloure"
+        android:hint="@string/last_name"
+        android:paddingStart="15dp"
+        android:text="@string/male"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageTextView"
+        app:layout_constraintVertical_bias="0.045"
+        tools:ignore="RtlSymmetry" />
+    <Button
+        android:id="@+id/editInfoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="184dp"
+        android:text="@string/edit_info"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
