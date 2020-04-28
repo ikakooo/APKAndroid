@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Lecture11_HomeWork</string>
+    <string name="go_to_the_second_page">Go to the second page</string>
+    <string name="hello_ikakooo">hello ikakooo-></string>
+    <string name="go_to_the_first_page">Go to the first page</string>
+    <string name="your_nik">Your Nik</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="your_age">Your Age</string>
+    <string name="choose_address">Choose Address</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="not_selected">Not selected</string>
+    <string name="your_address_write_here">your address write here</string>
+    <string name="irakli">Irakli</string>
+    <string name="chkhitunidze">Chkhitunidze</string>
+    <string name="i_chkhitunidze_cu_edu_ge">i_chkhitunidze@cu.edu.ge</string>
+    <string name="_1999">1999</string>
+    <string name="male">Male</string>
+    <string name="edit_info">Edit Personal Info</string>
+</resources>
