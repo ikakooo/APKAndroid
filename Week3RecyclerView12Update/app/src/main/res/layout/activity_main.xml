@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/scrollViewItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/taskBarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="#8BC34A"
+            android:text="@string/developer"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/taskBarButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="#F10A0A"
+            android:text="@string/nature_art"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/taskBarButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1"
+            android:text="@string/hacker"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/taskBarButtonDelete4"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:background="#7E7272"
+            android:layout_weight="1"
+            android:text="@string/delete" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

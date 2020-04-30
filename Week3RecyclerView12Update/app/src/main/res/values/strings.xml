@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Week3RecyclerView</string>
+    <string name="developer">Developer</string>
+    <string name="nature_art">Nature Art</string>
+    <string name="hacker">Hacker</string>
+    <string name="delete">Delete</string>
+</resources>
