@@ -67,7 +67,7 @@ android:hint="@string/email"
           android:scaleType="fitCenter"
 
             android:layout_gravity="end"
-            app:srcCompat="@mipmap/Trash"
+            app:srcCompat="@mipmap/trashs"
             tools:ignore="VectorDrawableCompat"
             android:contentDescription="@string/todo" />
     </FrameLayout>

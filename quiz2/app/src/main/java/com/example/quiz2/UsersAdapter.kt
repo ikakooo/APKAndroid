@@ -3,11 +3,12 @@ package com.example.quiz2
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.users_scrollview_layout.view.*
 //import kotlinx.android.synthetic.main.users_scrollview_layout.view.itemImageButton
 
-class ItemsConstructorUseAdapter(private val items: MutableList<User>) :
+class ItemsConstructorUseAdapter(private val user: MutableList<User>) :
     RecyclerView.Adapter<ItemsConstructorUseAdapter.ViewHolder>() {
 
 
@@ -19,7 +20,7 @@ class ItemsConstructorUseAdapter(private val items: MutableList<User>) :
     }
 
     override fun getItemCount(): Int {
-        return items.size
+        return user.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -39,8 +40,8 @@ class ItemsConstructorUseAdapter(private val items: MutableList<User>) :
         }
 
         fun onBind() {
-            modelinit = items[adapterPosition]
-             itemView.firstNameEditText.text = modelinit.userFirstName
+            modelinit = user[adapterPosition]
+            // itemView.firstNameEditText.text = modelinit.userFirstName
 
             // itemView.textView.text = modelinit.poster
             //itemView.textView2.text = modelinit.description
