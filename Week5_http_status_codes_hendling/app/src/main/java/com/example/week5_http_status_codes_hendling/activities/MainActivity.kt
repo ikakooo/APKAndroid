@@ -3,6 +3,7 @@ package com.example.week5_http_status_codes_hendling.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.week5_http_status_codes_hendling.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -16,8 +17,34 @@ class MainActivity : AppCompatActivity() {
 
     private fun init(){
         buttonMainAcID.setOnClickListener(){
-            startActivity(Intent(this,IdentifiedUsersActivity::class.java))
-            finish()
+            check()
+
+
         }
+    }
+
+    private fun check(){
+        val email = emailEditTextView.text.toString()
+        val password = passwordEditTextView.text.toString()
+
+        if(email.isNotEmpty() && password.isNotEmpty() ){
+
+            goToLoggedInAct()
+        }else{
+
+            toast()
+        }
+    }
+
+
+    private fun goToLoggedInAct(){
+        startActivity(Intent(this,IdentifiedUsersActivity::class.java))
+        finish()
+
+    }
+
+    private fun toast(){
+        val toast = Toast.makeText(applicationContext, "ორივე ველის შევსება სავალდებულოა!", Toast.LENGTH_SHORT)
+        toast.show()
     }
 }
