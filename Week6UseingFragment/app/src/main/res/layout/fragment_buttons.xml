@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    tools:context=".fragments.ButtonsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        app:cardCornerRadius="10dp">
+        <Button
+            android:id="@+id/logInUserButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/loginButtonColor"
+            android:text="@string/log_in"
+            android:textAllCaps="false" />
+    </androidx.cardview.widget.CardView>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    app:cardCornerRadius="10dp">
+    <Button
+        android:id="@+id/logOutUserButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:background="@color/logOutButtonColor"
+        android:text="@string/log_out"
+        android:textAllCaps="false" />
+</androidx.cardview.widget.CardView>
+
+
+</FrameLayout>
