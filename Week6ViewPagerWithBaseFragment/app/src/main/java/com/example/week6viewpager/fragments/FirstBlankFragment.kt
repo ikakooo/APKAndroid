@@ -29,6 +29,7 @@ class FirstBlankFragment : BaseFragment() {
         Handler().postDelayed({
             buttonFirstFragmentID.setOnClickListener(){
                 MainItemsView!!.textViewFirstFragmentID.text = "ikakooo"
+
             }
                 }, 2000)
 
