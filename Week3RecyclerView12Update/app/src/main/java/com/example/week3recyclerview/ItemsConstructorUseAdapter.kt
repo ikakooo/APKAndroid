@@ -27,6 +27,7 @@ class ItemsConstructorUseAdapter(private val items: MutableList<ItemsClass>) :
         return items.size
     }
 
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.onBind()
         //holder.starButtonClick()
