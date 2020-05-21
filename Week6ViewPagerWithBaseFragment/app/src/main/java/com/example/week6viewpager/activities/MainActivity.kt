@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
     @SuppressLint("SetTextI18n")
     private fun init(){
         val imageContainer= mutableListOf<Int>()
