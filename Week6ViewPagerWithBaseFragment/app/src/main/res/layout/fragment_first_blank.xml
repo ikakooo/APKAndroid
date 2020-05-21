@@ -8,12 +8,19 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewFirstFragmentID"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:textSize="25sp"
         android:textColor="@color/textColor"
         android:layout_height="wrap_content"
         android:text="@string/i_used_a_base_fragment" />
+
+    <Button
+        android:id="@+id/buttonFirstFragmentID"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/change_text" />
 
 </FrameLayout>

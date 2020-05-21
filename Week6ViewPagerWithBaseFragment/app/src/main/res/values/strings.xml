@@ -9,4 +9,5 @@
     <string name="photos_1">Photos : 1</string>
     <string name="add_from_web">Add From Web</string>
     <string name="i_used_a_base_fragment">I used a base fragment</string>
+    <string name="change_text">Change Text</string>
 </resources>
