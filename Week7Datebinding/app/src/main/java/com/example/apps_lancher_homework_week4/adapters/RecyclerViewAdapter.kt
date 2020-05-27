@@ -46,10 +46,10 @@ class RecyclerViewAdapter(private val applications: MutableList<AppsModels>) :
         fun onBind() {
             appinit = applications[adapterPosition]
             //binding.applications = applications[adapterPosition]
-            binding.applications.firstName = appinit.firstName
-            binding.applications.lastName = appinit.lastName
-            binding.applications.Email = appinit.Email
-
+//            binding.applications.firstName = appinit.firstName
+//            binding.applications.lastName = appinit.lastName
+//            binding.applications.Email = appinit.Email
+              binding.applications = appinit
             Glide.with(itemView.context).load(appinit.avatar).into(itemView.imageButtonID)
         }
     }
