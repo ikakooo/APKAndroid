@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         init()
         toast()
-        adapter = DataBindingUtil.setContentView(this, R.layout.apps_scrollviewitems_layout)
+       //adapter = DataBindingUtil.setContentView(this, R.layout.apps_scrollviewitems_layout)
     }
     private fun init() {
         adapter = RecyclerViewAdapter(applications)

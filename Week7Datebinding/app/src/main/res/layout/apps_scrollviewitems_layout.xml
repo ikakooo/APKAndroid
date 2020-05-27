@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="totalAmount" type="String" />
+        <variable name="applications"
+            type="com.example.apps_lancher_homework_week4.models.AppsModels" />
 
 
     </data>
@@ -52,7 +53,7 @@
                 android:gravity="center_vertical"
                 android:hint="@string/first_name"
                 android:paddingStart="15dp"
-                android:text=""
+                android:text="@{applications.firstName}"
                 android:textSize="20sp"
                 tools:ignore="RtlSymmetry" />
         </androidx.cardview.widget.CardView>
@@ -75,7 +76,7 @@
                 android:hint="@string/last_name"
                 android:paddingStart="15dp"
 
-                android:text=""
+                android:text="@{applications.lastName}"
                 android:textSize="20sp"
                 tools:ignore="RtlSymmetry" />
         </androidx.cardview.widget.CardView>
@@ -97,7 +98,7 @@
                 android:gravity="center_vertical"
                 android:hint="@string/e_mail"
                 android:paddingStart="15dp"
-                android:text=""
+                android:text="@{applications.email}"
                 android:textSize="19sp"
                 tools:ignore="RtlSymmetry" />
         </androidx.cardview.widget.CardView>
