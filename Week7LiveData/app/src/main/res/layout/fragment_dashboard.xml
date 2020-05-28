@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4CAF50"
     tools:context=".ui.dashboard.DashboardFragment">
 
     <Button
@@ -10,16 +11,17 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:textSize="110sp"
+        android:background="#4CAF50"
         android:text="@string/minus"
+        android:textSize="110sp"
         tools:ignore="OnClick" />
 
     <TextView
         android:id="@+id/text_dashboardID"
-        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-       android:layout_weight="0.5"
+        android:layout_weight="0.5"
+        android:gravity="center"
         android:text="@string/_0"
         android:textAlignment="center"
         android:textSize="90sp" />
@@ -29,6 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:textSize="110sp"
-        android:text="@string/plus" />
+        android:background="#4CAF50"
+        android:text="@string/plus"
+        android:textSize="110sp" />
 </LinearLayout>
