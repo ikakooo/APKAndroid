@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">ამინდი</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="ikakooo">ikakooo</string>
+    <string name="eur_to_sek_loading">EUR to SEK: Loading</string>
+    <string name="eur_to_rub_loading">EUR to RUB: Loading</string>
+    <string name="eur_to_usd_loading">EUR to USD: Loading</string>
+    <string name="textview_in_weather">in Weather</string>
+    <string name="weather">Weather</string>
+    <string name="ikakooo_s_app">Powered By Ikakooo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="email_or_nikname">Email or Nikname</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="or_register_here">Or Register Here</string>
+    <string name="register">Register</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="my_notes">My Notes</string>
+    <string name="email">Email</string>
+    <string name="you_are_logged_in">You are logged in</string>
+    <string name="go_back_to_log_in_page">Go back to log in page</string>
+</resources>

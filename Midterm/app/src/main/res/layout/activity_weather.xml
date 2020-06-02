@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context=".activities.WeatherActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpagerID"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/buttonID"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_gravity="start"
+            android:shadowColor="@color/redColor"
+            android:text="@string/my_notes"
+            android:background="@drawable/rounded_button_notes"
+            android:textAllCaps="false"
+            android:textColor="@color/redColor"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/USDtextViewID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingStart="10sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/eur_to_usd_loading"
+            android:textSize="40sp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/EUROtextViewID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingStart="10sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/eur_to_sek_loading"
+            android:textSize="40sp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/RUBtextViewID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingStart="10sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/eur_to_rub_loading"
+            android:textSize="40sp"
+            tools:ignore="RtlSymmetry" />
+
+
+    </LinearLayout>
+</LinearLayout>
