@@ -10,6 +10,8 @@ import kotlinx.android.synthetic.main.activity_log_in_notes.*
 import kotlinx.android.synthetic.main.activity_register_in_notes.*
 
 class LogInNotesActivity : AppCompatActivity() {
+    private val MIN_EMAIL_CHARARACTER_LENGS = 5
+    private val MIN_PASS_CHARARACTER_LENGS = 8
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,26 +23,41 @@ class LogInNotesActivity : AppCompatActivity() {
 
 
     private fun init() {
-        LogInButtonID.setOnClickListener(){
-        val email = LogInEmailEditTextsID.text.toString()
-        val password = LogInPasswordEditTextsID.text.toString()
+        LogInButtonID.setOnClickListener() {
+            val email = LogInEmailEditTextsID.text.toString()
+            val password = LogInPasswordEditTextsID.text.toString()
+            if (email.length >= MIN_EMAIL_CHARARACTER_LENGS && password.length >= MIN_PASS_CHARARACTER_LENGS) {
+                Toast.makeText(
+                    this,
+                    "please wait! before Email and Password checking",
+                    Toast.LENGTH_LONG
+                ).show()
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener {
+                        if (!it.isSuccessful) {
+                            Toast.makeText(
+                                this,
+                                "Password or Email doesn't match",
+                                Toast.LENGTH_LONG
+                            ).show()
+                            //return@addOnCompleteListener
+                        } else {
+                            startActivity(Intent(this, LoggedInNotesActivity::class.java))
+                            finish()
+                        }
 
-            Toast.makeText(this, "please wait! before Email and Password checking", Toast.LENGTH_LONG).show()
-            FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener {
-                    if (!it.isSuccessful) {
-                        Toast.makeText(this, "Password or Email doesn't match", Toast.LENGTH_LONG).show()
-                        //return@addOnCompleteListener
-                    }else{
-                        startActivity(Intent(this, LoggedInNotesActivity::class.java))
-                        finish()
                     }
-
-                }
 //                .addOnFailureListener {
 //                    Toast.makeText(this, "Password or Email doesn't match", Toast.LENGTH_LONG).show()
 //                }
-    }
+            } else {
+                Toast.makeText(
+                    this,
+                    "Password or Email doesn't match",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
         RegisterTextViewID.setOnClickListener() {
             startActivity(Intent(this, RegisterInNotesActivity::class.java))
         }
