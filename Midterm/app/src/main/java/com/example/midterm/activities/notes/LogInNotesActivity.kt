@@ -11,6 +11,9 @@ import kotlinx.android.synthetic.main.activity_register_in_notes.*
 
 class LogInNotesActivity : AppCompatActivity() {
 
+    private  val MIN_EMAIL_CHARARACTER_LENGS = 5
+    private  val MIN_PASS_CHARARACTER_LENGS = 8
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in_notes)
@@ -24,7 +27,7 @@ class LogInNotesActivity : AppCompatActivity() {
         LogInButtonID.setOnClickListener() {
             val email = LogInEmailEditTextsID.text.toString()
             val password = LogInPasswordEditTextsID.text.toString()
-            if (email.length >= 5 && password.length >= 8) {
+            if (email.length >= MIN_EMAIL_CHARARACTER_LENGS && password.length >= MIN_PASS_CHARARACTER_LENGS) {
                 Toast.makeText(
                     this,
                     "please wait! before Email and Password checking",
