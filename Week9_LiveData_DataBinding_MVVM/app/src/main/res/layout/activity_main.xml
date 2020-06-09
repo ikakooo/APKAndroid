@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="loginDataBinding"
+            type="com.example.week9_livedata_databinding_mvvm.MyCustomViewModel" />
+
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/EmailMainEditTextID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:paddingStart="10dp"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/PasswordMainEditTextID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:paddingStart="10dp"
+            tools:ignore="RtlSymmetry" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            visibility="@{loginDataBinding.progressBarVisible}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp" />
+
+
+        <Button
+            android:id="@+id/ButtonMainEdittTextID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()-> loginDataBinding.logIn(EmailMainEditTextID.getText().toString(),PasswordMainEditTextID.getText().toString())}"
+            android:text="@string/log_in" />
+
+<ImageView
+    android:id="@+id/smileMainImageID"
+    android:layout_width="100dp"
+    android:src="@{loginDataBinding.smile}"
+    android:layout_height="100dp"
+    android:layout_gravity="center"/>
+
+
+
+    </LinearLayout>
+
+</layout>
