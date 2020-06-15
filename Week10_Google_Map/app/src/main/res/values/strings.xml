@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Week10_Google_Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="todo">TODO</string>
+</resources>
