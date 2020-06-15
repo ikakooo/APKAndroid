@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(error: String) {
-                TODO("Not yet implemented")
+                d("logerror", error)
             }
 
         })
