@@ -47,17 +47,23 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private fun start() {
 
-        shadowImageViewID.layoutParams.width = 12
-        shadowImageViewID.layoutParams.height = 3
+
         circleRadiusID.visibility = View.INVISIBLE
         pointerImageViewID.animate().translationY(dpToPxl(-66))
-
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////// შადაუზე რატომ არ მუშაობს სიმაღლის და სიგანის შეცვლა???????????????????????????????????????????
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        shadowImageViewID.layoutParams.width = 12
+        shadowImageViewID.layoutParams.height = 3
     }
 
     private fun end() {
 
         circleRadiusID.visibility = View.VISIBLE
         pointerImageViewID.animate().translationY(dpToPxl(0))
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////// შადაუზე რატომ არ მუშაობს სიმაღლის და სიგანის შეცვლა???????????????????????????????????????????
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         shadowImageViewID.layoutParams.width = 36
         shadowImageViewID.layoutParams.height = 9
 
