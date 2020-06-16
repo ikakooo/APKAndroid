@@ -55,6 +55,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         shadowImageViewID.layoutParams.width = 12
         shadowImageViewID.layoutParams.height = 3
+        shadowImageViewID.requestLayout()
     }
 
     private fun end() {
@@ -66,6 +67,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         shadowImageViewID.layoutParams.width = 36
         shadowImageViewID.layoutParams.height = 9
+        shadowImageViewID.requestLayout()
 
     }
 
