@@ -7,10 +7,7 @@
     android:orientation="vertical"
     tools:context=".activities.AddressesSearchActivity">
 
-    <include
-
-        layout="@layout/toolbar_layout"
-        android:text="@string/save" />
+    <include layout="@layout/toolbar_layout" />
 
     <LinearLayout
         android:layout_width="match_parent"
