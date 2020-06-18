@@ -7,4 +7,8 @@
     <string name="zip_code">Zip Code</string>
     <string name="city">City</string>
     <string name="state">State</string>
+    <string name="try_again">Try Again</string>
+    <string name="incorrect_request">Incorrect Request</string>
+    <string name="please_fill_all_fields">Please Fill All Fields</string>
+    <string name="Address">Address</string>
 </resources>

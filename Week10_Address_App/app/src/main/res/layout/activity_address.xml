@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.AddressActivity">
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
+
         app:srcCompat="@mipmap/baseline_navigate_next_white_24"
         tools:ignore="RtlHardcoded" />
 
@@ -39,12 +40,13 @@
                 android:layout_height="wrap_content">
 
                 <EditText
+                    android:id="@+id/CountryEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@mipmap/grey_colour_circle_png_transparent_two"
                     android:hint="@string/country_region"
                     android:maxLines="1"
-                    android:text=""
+
 
                     android:textSize="25sp" />
             </com.google.android.material.textfield.TextInputLayout>

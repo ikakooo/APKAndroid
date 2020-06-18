@@ -1,4 +1,4 @@
-package com.example.week9_geolocation.request_tr
+package com.example.week9_geolocation.request_tr.location_rq
 
 import com.example.week9_geolocation.models.geolocation_request_json_parsing_models.LocationJSonModel
 import retrofit2.Call
@@ -18,7 +18,8 @@ object LocationDataLoader {
         Retrofit.Builder().baseUrl(URL_API).addConverterFactory(GsonConverterFactory.create())
             .build()
 
-    private val service = retrofit.create(APIService::class.java)
+    val service = retrofit.create(
+        APIService::class.java)
 
     fun getRequest(path: String, parameters: MutableMap<String, String>, callback: FutureCallbackBridge) {
         val call = service.getRequest(path, parameters)
