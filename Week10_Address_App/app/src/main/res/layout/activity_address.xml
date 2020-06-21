@@ -36,41 +36,48 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/CountryEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@mipmap/grey_colour_circle_png_transparent_two"
                     android:hint="@string/country_region"
                     android:maxLines="1"
+                    android:editable="false"
 
-
-                    android:textSize="25sp" />
+                    android:text="@string/choose_country"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
 
                 <EditText
+                    android:id="@+id/addressEditTextID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:drawableEnd="@mipmap/grey_colour_circle_png_transparent_two"
                     android:hint="@string/street_address"
                     android:maxLines="1"
-                    android:text=""
+                    android:editable="false"
+
+
+                    android:text="@string/search_address"
+                    android:textColor="@color/colorAccent"
                     android:textSize="25sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
-                android:layout_marginTop="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -81,11 +88,12 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:drawableEnd="@mipmap/grey_colour_circle_png_transparent_two"
                         android:hint="@string/city"
                         android:maxLines="1"
-                        android:text=""
+                        android:text=" "
+
+                        android:textColor="@color/colorAccent"
                         android:textSize="25sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -97,19 +105,19 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:drawableEnd="@mipmap/grey_colour_circle_png_transparent_two"
                         android:hint="@string/state"
                         android:maxLines="1"
-                        android:text=""
+                        android:text=" "
+                        android:textColor="@color/colorAccent"
                         android:textSize="25sp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
 
                 <EditText
                     android:layout_width="match_parent"
@@ -118,7 +126,9 @@
                     android:drawableEnd="@mipmap/grey_colour_circle_png_transparent_two"
                     android:hint="@string/zip_code"
                     android:maxLines="1"
-                    android:text=""
+                    android:text=" "
+                    android:autofillHints="@string/zip_code"
+                    android:textColor="@color/colorAccent"
                     android:textSize="25sp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>

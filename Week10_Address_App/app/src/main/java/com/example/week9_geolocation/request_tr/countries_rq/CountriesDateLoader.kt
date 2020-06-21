@@ -1,6 +1,6 @@
 package com.example.week9_geolocation.request_tr.countries_rq
 
-import com.example.week9_geolocation.activities.AddressesSearchActivity
+import com.example.week9_geolocation.activities.ChooseCountryActivity
 import com.example.week9_geolocation.models.countries_request_json_parsing_models.CountriesJSonModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -26,7 +26,7 @@ object CountriesDateLoader {
         path: String,
         parameters: MutableMap<String, String>,
         callback: FutureCallbackCountryBridge,
-        addressesSearchActivity: AddressesSearchActivity
+        addressesSearchActivity: ChooseCountryActivity
     ) {
         val call = CountriesDateLoader.service.getCountriesRequest(path, parameters)
         call.enqueue(object : Callback<CountriesJSonModel> {

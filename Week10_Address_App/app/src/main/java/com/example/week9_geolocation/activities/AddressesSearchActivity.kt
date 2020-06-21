@@ -34,7 +34,7 @@ class AddressesSearchActivity : AppCompatActivity() {
         setContentView(R.layout.activity_search_addresses)
 
         init()
-        countriesRequest()
+       // countriesRequest()
     }
 
     private fun init() {
@@ -53,12 +53,14 @@ class AddressesSearchActivity : AppCompatActivity() {
     }
 
 
-    private fun AddressRequest(input: String) {
+    private fun addressRequest(input: String) {
+        var countryID= intent.extras?.getString("countryID")
 
         val parameters = mutableMapOf<String, String>()
         parameters["input"] = input
         parameters["key"] = API_KEY
         parameters["language"] = "en"
+        parameters["components"]="country:$countryID"
         LocationDataLoader.getRequest(
             LocationDataLoader.AUTOCOMPLETE,
             parameters,
@@ -68,13 +70,9 @@ class AddressesSearchActivity : AppCompatActivity() {
                         items.clear()
                         if (response.predictions.isNotEmpty()) {
                             val setItems = response.predictions.size
+                            d("sdSDfdfsdf",setItems.toString())
                             (0 until setItems).forEach {
-                                val jsonPrediction = response.predictions[it]
-                                d("sdkjfsdjfsdfss", response.toString())
-                                items.add(
-                                    SearchResultAdapter_Model(
-                                        jsonPrediction.description.toString(),
-                                        jsonPrediction.place_id.toString()
+                                items.add(SearchResultAdapter_Model(response.predictions[it].description.toString(), response.predictions[it].place_id.toString()
                                     )
                                 )
                             }
@@ -97,30 +95,6 @@ class AddressesSearchActivity : AppCompatActivity() {
 
     }
 
-    private fun countriesRequest() {
-        val parameters = mutableMapOf<String, String>()
-
-        CountriesDateLoader.getRequest(
-            CountriesDateLoader.COUNTRY_API_AUTOCOMPLETE,parameters,
-            object : FutureCallbackCountryBridge {
-                override fun onResponse(response: CountriesJSonModel?) {
-                    val countOfCountries = response!!.results.size
-                    (0 until countOfCountries).forEach { it ->
-                        val ika = response.results[it].name
-                        d("fdgsfgdfgsd", ika.toString())
-                        //რესფონსი მოაქვს დასასეტია
-                    }
-                }
-
-                override fun onFailure(error: String) {
-                    TODO("Not yet implemented")
-                }
-
-
-            },
-            this
-        )
-    }
 
 
 
@@ -138,7 +112,7 @@ class AddressesSearchActivity : AppCompatActivity() {
         }
 
         override fun onTextChanged(inputText: CharSequence?, start: Int, before: Int, count: Int) {
-            AddressRequest(inputText.toString())
+            addressRequest(inputText.toString())
         }
 
     }

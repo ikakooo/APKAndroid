@@ -11,4 +11,8 @@
     <string name="incorrect_request">Incorrect Request</string>
     <string name="please_fill_all_fields">Please Fill All Fields</string>
     <string name="Address">Address</string>
+    <string name="choose_country">Choose Country…</string>
+    <string name="search_address">Search Address…</string>
+    <string name="space"> </string>
+    <string name="Save">Save</string>
 </resources>
