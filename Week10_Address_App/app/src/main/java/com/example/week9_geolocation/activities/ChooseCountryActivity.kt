@@ -5,7 +5,9 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.week9_geolocation.R
@@ -62,7 +64,12 @@ class ChooseCountryActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(error: String) {
-                    TODO("Not yet implemented")
+                    Toast.makeText(applicationContext,"this is toast message",Toast.LENGTH_SHORT).show()
+                    val toast = Toast.makeText(applicationContext, "Hello Javatpoint", Toast.LENGTH_LONG)
+                    toast.show()
+                    val myToast = Toast.makeText(applicationContext,"No Internet",Toast.LENGTH_SHORT)
+                    myToast.setGravity(Gravity.TOP,200,200)
+                    myToast.show()
                 }
 
 
