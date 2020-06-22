@@ -1,9 +1,12 @@
 package com.example.week9_geolocation.activities
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.util.Log.d
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,6 +24,7 @@ import kotlinx.android.synthetic.main.activity_search_addresses.*
 import kotlinx.android.synthetic.main.toolbar_layout.*
 
 class AddressesSearchActivity : AppCompatActivity() {
+    private lateinit var countryID : String
     private lateinit var recyclerViewAdapter: RecyclerViewAdapter
     private val items = mutableListOf<SearchResultAdapter_Model>()
 
@@ -38,14 +42,17 @@ class AddressesSearchActivity : AppCompatActivity() {
     }
 
     private fun init() {
+
         setSupportActionBar(toolbarID)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowTitleEnabled(false)
+        ToolbarTextViewID.text = getString(R.string.Save)
 
         recyclerViewAdapter = RecyclerViewAdapter(items)
         RecyclerviewID.layoutManager = LinearLayoutManager(this)
         RecyclerviewID.adapter = recyclerViewAdapter
         searchLocationID.addTextChangedListener(textWatcher)
+        saveOrBack()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -54,8 +61,8 @@ class AddressesSearchActivity : AppCompatActivity() {
 
 
     private fun addressRequest(input: String) {
-        var countryID= intent.extras?.getString("countryID")
-
+        countryID = intent.extras?.getString("countryID", "GE").toString()
+d("sdfddfsdfsd",countryID)
         val parameters = mutableMapOf<String, String>()
         parameters["input"] = input
         parameters["key"] = API_KEY
@@ -95,7 +102,22 @@ class AddressesSearchActivity : AppCompatActivity() {
 
     }
 
+    private fun saveOrBack(){
 
+
+
+        ToolbarTextViewID.setOnClickListener {
+
+//
+
+            val myintent = Intent(this, AddressActivity::class.java)
+            //val returnIntent = this.intent
+            Log.d("sfddfsdfjldfjsdfkj", recyclerViewAdapter.selectedAddressString)
+            myintent.putExtra("addressExtraString", recyclerViewAdapter.selectedAddressString )
+            setResult(Activity.RESULT_OK, myintent)
+            super.onBackPressed()
+        }
+    }
 
 
 

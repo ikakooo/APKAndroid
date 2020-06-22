@@ -14,6 +14,11 @@ import kotlinx.android.synthetic.main.activity_address.*
 import kotlinx.android.synthetic.main.toolbar_layout.*
 
 class AddressActivity : AppCompatActivity() {
+    private var countryID : String? = "GE"
+    companion object {
+        const val CHOOSE_COUNTRY = 1
+        const val CHOOSE_ADDRESS = 2
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +33,7 @@ class AddressActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        getInputValues()
+        //getInputValues()
     }
 
 
@@ -43,7 +48,7 @@ class AddressActivity : AppCompatActivity() {
         CountryEditTextId.setOnTouchListener { v, event ->
             when (event?.action) {
                 MotionEvent.ACTION_DOWN -> {
-                    startActivity(intent(1))
+                    startActivityForResult(intent(1),CHOOSE_COUNTRY)
                 }
             }
             v?.onTouchEvent(event) ?: true
@@ -52,7 +57,9 @@ class AddressActivity : AppCompatActivity() {
         addressEditTextID.setOnTouchListener { v, event ->
             when (event?.action) {
                 MotionEvent.ACTION_DOWN -> {
-                    startActivity(intent(2))
+                    val myIntent = Intent(this, AddressesSearchActivity::class.java)
+                    myIntent.putExtra("countryID", countryID)
+                    startActivityForResult(myIntent,CHOOSE_ADDRESS)
                 }
             }
             v?.onTouchEvent(event) ?: true
@@ -85,13 +92,16 @@ class AddressActivity : AppCompatActivity() {
 
     private fun getInputValues(){
 
-        var strUser: String? = intent.extras?.getString("Username","GE")
+        val intent = intent;
+        val myValue = intent.getStringExtra("samplename")
 
         //val selected=intent.extras?.getString("SelectedCountryAbbreviation")
-        d("sdfsdfsdsds",strUser.toString())
-          if (strUser != null) {
+        d("sdfsdfsdsds",myValue.toString())
+          if (myValue != null) {
 
-              CountryEditTextId.text = Editable.Factory.getInstance().newEditable(strUser)
+              CountryEditTextId.text = Editable.Factory.getInstance().newEditable(myValue.toString())
+          }else{
+              CountryEditTextId.text = Editable.Factory.getInstance().newEditable("Georgia")
           }
 
 
@@ -100,14 +110,49 @@ class AddressActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if(resultCode== Activity.RESULT_OK){
+        if (resultCode == Activity.RESULT_OK) {
+            if (requestCode == CHOOSE_COUNTRY) {
+                val myValue:String?  = data?.extras?.getString("samplename").toString()
+                 countryID  = data?.extras?.getString("samplenameID").toString()
+                CountryEditTextId.text = Editable.Factory.getInstance().newEditable(myValue)
 
-            var strUsers= data?.extras?.getString("Username","GE")
+            }else if (requestCode == CHOOSE_ADDRESS){
+                val myValueAddress:String?  = data?.extras?.getString("addressExtraString").toString()
 
 
-            CountryEditTextId.text = Editable.Factory.getInstance().newEditable(strUsers)
-
+                addressEditTextID.text = Editable.Factory.getInstance().newEditable(myValueAddress)
+            }
         }
     }
+
+
+
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//
+//        if(resultCode== Activity.RESULT_OK){
+//
+//            var strUsers= data!!.extras!!.getString("Username","GE")
+//
+//
+//            CountryEditTextId.text = Editable.Factory.getInstance().newEditable(strUsers)
+//
+//        }
+//    }
+
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (requestCode == CHOOSE_COUNTRY) {
+//
+//                   // data!!.extras!!.getString("countryId", ""),
+//                d("sdfsdfsdsds",data!!.extras!!.getString("countryName", "GE"))
+//                CountryEditTextId.text = Editable.Factory.getInstance().newEditable(data!!.extras!!.getString("countryName", "GE"))
+//
+//            } else if (requestCode == CHOOSE_STREET_ADDRESS) {
+//                return
+//            }
+//        }
+//        super.onActivityResult(requestCode, resultCode, data)
+//    }
 
 }

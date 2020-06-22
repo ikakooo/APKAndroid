@@ -2,6 +2,7 @@ package com.example.week9_geolocation.activities
 
 import android.app.Activity
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -19,7 +20,7 @@ import kotlinx.android.synthetic.main.toolbar_layout.*
 class ChooseCountryActivity : AppCompatActivity() {
     private lateinit var countryRecyclerViewAdapter: CountryRecyclerViewAdapter
     private val countries = mutableListOf<SearchCountriesAdapterModel>()
-
+    private var countryName = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_country)
@@ -76,11 +77,12 @@ class ChooseCountryActivity : AppCompatActivity() {
 
 
         ToolbarTextViewID.setOnClickListener {
-            val myIntent=intent
-            //intent.putExtra("position",countryRecyclerViewAdapter.selectedCountry)
-            myIntent.putExtra("Username",countryRecyclerViewAdapter.selectedCountryAbbreviation.toString())
-            Log.d("sfddfsdfjldfjsdfkj", countryRecyclerViewAdapter.selectedCountryAbbreviation)
-            setResult(Activity.RESULT_OK,intent)
+
+            val myintent = Intent(this, AddressActivity::class.java)
+            //val returnIntent = this.intent
+            myintent.putExtra("samplename", countryRecyclerViewAdapter.selectedCountryAbbreviation)
+            myintent.putExtra("samplenameID", countryRecyclerViewAdapter.selectedCountryAbbreviationID)
+            setResult(Activity.RESULT_OK, myintent)
             super.onBackPressed()
         }
     }

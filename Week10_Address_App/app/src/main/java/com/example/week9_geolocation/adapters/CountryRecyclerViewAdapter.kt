@@ -19,7 +19,8 @@ class CountryRecyclerViewAdapter(private val Countries: MutableList<SearchCountr
     RecyclerView.Adapter<CountryRecyclerViewAdapter.ViewHolder>() {
 
     var selectedCountry = 0
-    var selectedCountryAbbreviation ="GE"
+    var selectedCountryAbbreviation ="Georgia"
+    var selectedCountryAbbreviationID ="GE"
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder(
         LayoutInflater.from(parent.context)
@@ -40,13 +41,12 @@ class CountryRecyclerViewAdapter(private val Countries: MutableList<SearchCountr
             country = Countries[adapterPosition]
 
             itemView.countriesTextViewID.text =  country.iso2.toString() +":  "+ country.name.toString()
-            if(adapterPosition==selectedCountry) {itemView.saveIconID.visibility=View.VISIBLE
-                selectedCountryAbbreviation = country.iso2.toString()
-                d("sdfjldfjsdfkj",selectedCountryAbbreviation)
-
+            if(adapterPosition==selectedCountry) {itemView.saveIconCountryID.visibility=View.VISIBLE
+                selectedCountryAbbreviation = country.name.toString()
+                selectedCountryAbbreviationID = country.iso2.toString()
 
             }
-            else itemView.saveIconID.visibility=View.INVISIBLE
+            else itemView.saveIconCountryID.visibility=View.INVISIBLE
 
             itemView.countriesTextViewID.setOnClickListener(){
                 selectedCountry=adapterPosition

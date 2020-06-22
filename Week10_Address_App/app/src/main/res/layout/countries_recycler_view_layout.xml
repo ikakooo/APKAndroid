@@ -11,14 +11,15 @@
         android:gravity="start|center"
         android:layout_weight="1"
         android:maxLines="1"
+        android:textColor="#6E6E6E"
         android:text="teetetetetetert"
         android:textSize="20sp" />
 
     <ImageView
-        android:id="@+id/saveIconID"
+        android:id="@+id/saveIconCountryID"
         android:visibility="invisible"
         android:layout_width="50dp"
-        android:layout_height="40dp"
+        android:layout_height="20dp"
 
         android:src="@mipmap/selected" />
 
