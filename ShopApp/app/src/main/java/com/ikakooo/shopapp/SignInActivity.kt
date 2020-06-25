@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_sign_in.*
 
 
 class SignInActivity : AppCompatActivity() {
-    private var REMEMBER_ME = 0
+    private var REMEMBER_ME = false
     private var IF_REMEMBER_ME_UNCHEKED = 0
     private var IF_REMEMBER_ME_CHEKED = 1
 
@@ -35,22 +35,22 @@ class SignInActivity : AppCompatActivity() {
 
 
         rememberCheckButtonID.setOnClickListener {
-            if (REMEMBER_ME == IF_REMEMBER_ME_UNCHEKED) {
-                rememberCheckButtonID.setCompoundDrawablesWithIntrinsicBounds(
-                    R.mipmap.cheked,
-                    0,
-                    0,
-                    0
-                )
-                REMEMBER_ME = IF_REMEMBER_ME_CHEKED
-            } else {
+            if (REMEMBER_ME) {
                 rememberCheckButtonID.setCompoundDrawablesWithIntrinsicBounds(
                     R.mipmap.unchecked,
                     0,
                     0,
                     0
                 )
-                REMEMBER_ME = IF_REMEMBER_ME_UNCHEKED
+                REMEMBER_ME = false
+            } else {
+                rememberCheckButtonID.setCompoundDrawablesWithIntrinsicBounds(
+                    R.mipmap.cheked,
+                    0,
+                    0,
+                    0
+                )
+                REMEMBER_ME = true
             }
 
             d("sdfsdfsdfsdf", REMEMBER_ME.toString())
