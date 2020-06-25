@@ -16,7 +16,6 @@
         android:src="@mipmap/ic_launcher_foreground" />
 
 
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -31,17 +30,17 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
+                android:textColorHint="@color/colorText"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailEditTextId"
+                    android:id="@+id/emailEditTextID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email_address"
                     android:maxLines="1"
 
-                    android:textColorHint="@color/colorAccent"
                     android:text="@string/johndoe_email_com"
                     android:textColor="@color/colorText"
                     android:textSize="20sp" />
@@ -50,6 +49,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColorHint="@color/colorText"
                 android:layout_marginTop="15dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -57,11 +57,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
+                    android:inputType="textPassword"
                     android:maxLines="1"
                     android:text=""
-
                     android:textColor="@color/colorText"
-                    android:textColorHint="@color/colorPrimary"
+
                     android:textSize="20sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -105,8 +105,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
             android:layout_marginTop="46dp"
-            android:text=""
             android:layout_marginBottom="20dp"
+            android:text=""
             android:textColor="@color/colorText"
             android:textSize="17sp" />
     </FrameLayout>

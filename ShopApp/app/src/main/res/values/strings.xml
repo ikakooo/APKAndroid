@@ -11,4 +11,6 @@
     <string name="new_user">New user?</string>
     <string name="sign_up">Sign up</string>
     <string name="here">here</string>
+    <string name="try_again">Try Again</string>
+    <string name="incorrect_request">Incorrect Request</string>
 </resources>

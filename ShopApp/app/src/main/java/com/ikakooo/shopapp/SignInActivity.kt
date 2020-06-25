@@ -1,9 +1,8 @@
 package com.ikakooo.shopapp
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.SpannableStringBuilder
+import android.text.*
 import android.text.style.ForegroundColorSpan
 import android.util.Log.d
 import android.widget.TextView
@@ -36,20 +35,10 @@ class SignInActivity : AppCompatActivity() {
 
         rememberCheckButtonID.setOnClickListener {
             if (REMEMBER_ME) {
-                rememberCheckButtonID.setCompoundDrawablesWithIntrinsicBounds(
-                    R.mipmap.unchecked,
-                    0,
-                    0,
-                    0
-                )
+                rememberCheckButtonID.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.unchecked, 0, 0, 0)
                 REMEMBER_ME = false
             } else {
-                rememberCheckButtonID.setCompoundDrawablesWithIntrinsicBounds(
-                    R.mipmap.cheked,
-                    0,
-                    0,
-                    0
-                )
+                rememberCheckButtonID.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.cheked, 0, 0, 0)
                 REMEMBER_ME = true
             }
 
@@ -78,7 +67,32 @@ class SignInActivity : AppCompatActivity() {
 
     }
 
+private fun setEmailSuccessMarkIfValid(){
+    var drawablesIcon: Drawable? = null
+    if (CustomTools.isEmailValid(emailEditTextID.text.toString())){ drawablesIcon = getDrawable(R.mipmap.baseline_check_circle_big)}
+    emailEditTextID.setCompoundDrawablesWithIntrinsicBounds(null,null,drawablesIcon,null)
 
+
+}
+
+
+    private val textWatcher = object : TextWatcher {
+        override fun afterTextChanged(inputText: Editable?) {
+        }
+
+        override fun beforeTextChanged(
+            inputText: CharSequence?,
+            start: Int,
+            count: Int,
+            after: Int
+        ) {
+        }
+
+        override fun onTextChanged(inputText: CharSequence?, start: Int, before: Int, count: Int) {
+            setEmailSuccessMarkIfValid()
+        }
+
+    }
 }
 
 
