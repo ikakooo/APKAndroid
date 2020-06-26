@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.*
 import android.text.style.ForegroundColorSpan
 import android.util.Log.d
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -30,8 +31,8 @@ class SignInActivity : AppCompatActivity() {
         setColor(signUpTextViewID, (R.color.colorAccent), getString(R.string.sign_up) + " ")
         setColor(signUpTextViewID, (R.color.colorText), getString(R.string.here))
 
-
-
+        emailEditTextID.addTextChangedListener(textWatcher)
+        logIn()
 
         rememberCheckButtonID.setOnClickListener {
             if (REMEMBER_ME) {
@@ -41,8 +42,6 @@ class SignInActivity : AppCompatActivity() {
                 rememberCheckButtonID.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.cheked, 0, 0, 0)
                 REMEMBER_ME = true
             }
-
-            d("sdfsdfsdfsdf", REMEMBER_ME.toString())
         }
 
 
@@ -67,12 +66,13 @@ class SignInActivity : AppCompatActivity() {
 
     }
 
-private fun setEmailSuccessMarkIfValid(){
+private fun setEmailSuccessMarkIfValid(input:String):Boolean{
     var drawablesIcon: Drawable? = null
-    if (CustomTools.isEmailValid(emailEditTextID.text.toString())){ drawablesIcon = getDrawable(R.mipmap.baseline_check_circle_big)}
+    val valid = CustomTools.isEmailValid(input.toString())
+    if (valid){ drawablesIcon = getDrawable(R.mipmap.baseline_check_circle_big)}
     emailEditTextID.setCompoundDrawablesWithIntrinsicBounds(null,null,drawablesIcon,null)
 
-
+return valid
 }
 
 
@@ -89,9 +89,26 @@ private fun setEmailSuccessMarkIfValid(){
         }
 
         override fun onTextChanged(inputText: CharSequence?, start: Int, before: Int, count: Int) {
-            setEmailSuccessMarkIfValid()
+            setEmailSuccessMarkIfValid(inputText.toString())
         }
 
+    }
+
+
+   private  fun logIn(){
+
+        singInButtonID.setOnClickListener {
+            val ifValidTrue = setEmailSuccessMarkIfValid(emailEditTextID.text.toString())
+            if(emailEditTextID.text.isNullOrEmpty()|| PasswordEditTextId.text.isNullOrEmpty()){
+                CustomTools.customDialog(this,getString(R.string.empty_fields), getString(R.string.please_fill_all_fields))
+            }else if (!ifValidTrue){
+                //ffddfd
+                CustomTools.customDialog(this,getString(R.string.invalid_email),getString(R.string.please_check))
+            } else {
+                CustomTools.customDialog(this, "Short Password","Strong Password is Required!")
+            }
+
+        }
     }
 }
 

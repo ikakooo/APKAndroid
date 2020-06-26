@@ -13,4 +13,8 @@
     <string name="here">here</string>
     <string name="try_again">Try Again</string>
     <string name="incorrect_request">Incorrect Request</string>
+    <string name="empty_fields">Empty Fields</string>
+    <string name="please_fill_all_fields">Please Fill All Fields</string>
+    <string name="please_check">Please Check</string>
+    <string name="invalid_email">Invalid Email</string>
 </resources>
