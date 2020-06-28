@@ -1,11 +1,11 @@
-package com.ikakooo.shopapp
+package com.ikakooo.shopapp.activitis
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log.d
+import com.ikakooo.shopapp.R
 import java.lang.Exception
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -58,7 +58,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
 
     private fun init(){
-        val intent=Intent(this,SignInActivity::class.java)
+        val intent=Intent(this, SignInActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
         overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)

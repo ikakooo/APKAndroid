@@ -2,9 +2,14 @@ package com.ikakooo.shopapp
 
 import android.app.Dialog
 import android.content.Context
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.my_custom_dialog_layout.*
 
 object CustomTools {
@@ -32,5 +37,24 @@ object CustomTools {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
+
+
+     fun setColor(view: TextView, color: Int, text: String,context: Context) {
+        // val builder = SpannableStringBuilder()
+
+
+        val string: Spannable = SpannableString(text)
+        string.setSpan(
+            ForegroundColorSpan(ContextCompat.getColor(context, color)),
+            0,
+            string.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+        view.append(string)
+
+
+        //view.setText(builder, TextView.BufferType.SPANNABLE)
+
+    }
 
 }

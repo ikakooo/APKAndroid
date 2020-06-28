@@ -3,7 +3,6 @@
     <string name="email_address">Email address</string>
     <string name="password">Password</string>
     <string name="remember_me">Remember Me</string>
-    <string name="sing_in">Sing In</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="new_user_sign_up_here">New user? Sign up here</string>
     <string name="johndoe_email_com">johndoe@email.com</string>
@@ -17,4 +16,6 @@
     <string name="please_fill_all_fields">Please Fill All Fields</string>
     <string name="please_check">Please Check</string>
     <string name="invalid_email">Invalid Email</string>
+    <string name="sign_in">Sign In</string>
+
 </resources>
