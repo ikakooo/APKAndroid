@@ -50,11 +50,12 @@ android:layout_marginTop="25dp"
             android:textSize="14sp" />
 
         <LinearLayout
-            android:layout_marginTop="45dp"
             android:layout_width="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+
+            android:orientation="vertical">
+
             <TextView
 
                 android:layout_width="wrap_content"
@@ -101,48 +102,99 @@ android:layout_marginTop="25dp"
                     android:textSize="20sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            Expiry Date
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:orientation="horizontal">
+
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:textColorHint="@color/colorText">
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1">
 
-                    <com.google.android.material.textfield.TextInputEditText
-
+                    <EditText
+                        android:id="@+id/expiryDateEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Card Holder Name"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1"
-                        android:text=""
-                        android:textColor="@color/colorText"
-                        android:textSize="20sp" />
+                        android:hint="@string/expiry_date"
+                        android:inputType="number" />
+
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:textColorHint="@color/colorText">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1">
 
+                    <EditText
+                        android:id="@+id/cardholderNameEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Card Holder Name"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1"
-                        android:text=""
-                        android:textColor="@color/colorText"
-                        android:textSize="20sp" />
+                        android:hint="@string/security_code"
+                        android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
-
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="45dp"
+                android:text="@string/add_location"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColorHint="@color/colorText">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Add your Address"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:text="Lorem Ipsum street 3"
+                    android:textColor="@color/colorText"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:src="@mipmap/map"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="52dp"
+                android:layout_marginTop="45dp"
+                android:text="Floor/Appartment"
+                android:textColor="@color/colorText"
+                android:textSize="17sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/button_bacground"
+android:layout_marginBottom="100dp"
+                android:text="@string/complete_profile"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
         </LinearLayout>
+
 
     </LinearLayout>
 

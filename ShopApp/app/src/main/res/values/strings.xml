@@ -17,5 +17,8 @@
     <string name="please_check">Please Check</string>
     <string name="invalid_email">Invalid Email</string>
     <string name="sign_in">Sign In</string>
-
+    <string name="security_code">Security Code</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="add_location">Add Location</string>
+    <string name="complete_profile">Complete Profile</string>
 </resources>
